@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+:root{
+    --main-color: rgba(236, 12, 12, 0.527);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+nav .left{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+nav .left img{
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+nav ul{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul a{
+    text-decoration: none;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+}
+nav ul .pro{
+    position: relative;
+}
+nav ul .pro::before{
+    content: "";
+    position: absolute;
+    right: -11px;
+    top: 44%;
+    transform: translateX(50%);
+    border: #777 solid 5px;
+    border-color: #777 transparent transparent transparent;
+    cursor: pointer;
+}
+a::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    transition: 0.5s;
+}
+a:hover::after{
+    width: 100%;
+}
+nav ul li{
+    list-style: none;
+}
+nav .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+nav .right a{
+    text-decoration: none;
+    color: #000000bf;
+    position: relative;
+}
+nav button{
+    margin-left: 10px;
+}
+button{
+    color: rgb(214, 198, 198);
+    background: #000000bf;
+    padding: 10px 10px;
+    width: 130px;
+    height: 50px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:hover{
+    color: #fff;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+.container .col-1 {
+    max-width: 50%;
+    padding-left: 51px;
+}
+.container .col-1 h1{
+    margin: 151px auto 15px;
+    font-size: 55px;
+    font-weight: bold;
+    word-spacing: 9px;
+}
+.container .col-1 p{
+    margin-bottom: 11px;
+    line-height: 33px;
+    color: #777;
+    font-size: 18px;
+    word-spacing: 5px;
+}
+.container .p{
+    position: absolute;
+    bottom: 10px;
+    left: 35%;
+    transform: translateX(50%);
+    color: #777;
+    text-transform: uppercase;
+}
+.container .p i{
+    color: red;
+}
+.container .col-2{
+    position: absolute;
+    right: -150px;
+    top: 0;
+    width: 700px;
+    height: 700px;
+    background: rgba(255, 0, 0, 0.616);
+    border-radius: 50%;
+    border-bottom-left-radius: 55%;
+}
+.container .col-2 img:nth-child(1){
+    height: 420px;
+    position: absolute;
+    bottom: 195px;
+    right: 250px;
+    border-radius: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.container .col-2 img:nth-child(1):hover{
+    transform: translateY(-30px);
+}
+.container .col-2 img:nth-child(2){
+    width: 50px;
+    position: absolute;
+    bottom: 158px;
+    right: 155px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.container .col-2 img:nth-child(2):hover{
+    transform: rotateY(360deg);
+}
